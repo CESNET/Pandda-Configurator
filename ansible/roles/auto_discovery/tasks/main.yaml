@@ -1,0 +1,33 @@
+- name: copy auto_discovery.sh script
+  ansible.builtin.copy:
+    src: auto_discovery.sh
+    dest: /tmp/auto_discovery.sh
+    mode: 0755
+
+- name: run auto_discovery.sh script
+  ansible.builtin.shell: /tmp/auto_discovery.sh
+
+- name: download .tar created by auto_discovery.sh
+  ansible.builtin.fetch:
+    src: /tmp/machine_info.tar.gz
+    dest: "/opt/pandda_autodiscovery/machine_info/{{ inventory_hostname }}/"
+    flat: true
+
+- name: extract .tar from auto_discovery.sh
+  delegate_to: localhost
+  become: false
+  ansible.builtin.unarchive:
+    src: "/opt/pandda_autodiscovery/machine_info/{{ inventory_hostname }}/machine_info.tar.gz"
+    dest: "/opt/pandda_autodiscovery/machine_info/{{ inventory_hostname }}"
+
+- name: copy parser
+  delegate_to: localhost
+  become: false
+  ansible.builtin.copy:
+    src: machine_info_parser.py
+    dest: "/opt/pandda_autodiscovery/machine_info/{{ inventory_hostname }}"
+
+- name: parse auto_discovery.sh output
+  delegate_to: localhost
+  become: false
+  ansible.builtin.shell: "python3 /opt/pandda_autodiscovery/machine_info/{{ inventory_hostname }}/machine_info_parser.py"

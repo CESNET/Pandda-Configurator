@@ -1,0 +1,3 @@
+[submodule "pandda_playbooks"]
+	path = pandda_playbooks
+	url = https://github.com/CESNET/Pandda-Playbooks

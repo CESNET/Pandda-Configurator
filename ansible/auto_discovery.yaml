@@ -1,0 +1,7 @@
+---
+- name: PANDDA Auto Discovery
+  hosts: all
+  become: true
+  roles:
+    - install_deps
+    - auto_discovery
