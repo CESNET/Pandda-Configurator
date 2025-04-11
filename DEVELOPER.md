@@ -12,7 +12,7 @@ Dockerfile and Vagrantfile are available in this project. The default settings i
 
 Firstly, you must download submodules:
 ```bash
-git submodule init
+git submodule update --init --recursive
 ```
 
 ## Vagrant
@@ -51,4 +51,13 @@ docker exec -i -t pandda-webconf bash
 See logs of PANDDA services:
 ```
 docker logs <containerID>
+```
+
+# Publish a Dockerbox on the Dockerhub
+
+Follow these commands for publishing a new Dockerbox on Dockerhub:
+```
+docker build -t plnyrich/pandda-configurator .
+docker image tag plnyrich/pandda-configurator plnyrich/pandda-configurator:<version>
+docker push plnyrich/pandda-configurator
 ```
