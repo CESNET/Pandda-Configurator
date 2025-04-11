@@ -22,8 +22,8 @@ Configurator is available at [localhost:8080](http://localhost:8080) **after ins
 
 Install the Dockerbox with Configurator by running:
 ```bash
-docker pull plnyrich/pandda-devel
-docker run plnyrich/pandda-devel
+docker pull plnyrich/pandda-configurator
+docker run -d -p 8080:5000 -p 8081:5001 plnyrich/pandda-configurator
 ```
 
 ### Vagrantbox
