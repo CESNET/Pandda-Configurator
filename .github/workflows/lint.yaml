@@ -1,0 +1,16 @@
+name: Linter
+
+on:
+  pull_request:
+  push:
+
+jobs:
+  commitlint:
+    name: Commit Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Run Commitlint
+        uses: wagoid/commitlint-github-action@v6
