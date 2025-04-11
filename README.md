@@ -12,7 +12,9 @@ Step-by-step configuration guide is available as a website that provision both n
 
 ## Installation
 
-Configurator is distributed as ready-to-use [Dockerbox](https://hub.docker.com/r/plnyrich/pandda-devel). Soon, it will be also available as Vagrantbox.
+Configurator is distributed as ready-to-use [Dockerbox](https://hub.docker.com/r/plnyrich/pandda-devel). However, you can build it yourself.
+<br />
+You can also use vagrant with our prepared Vagrantfile.
 
 Configurator is available at [localhost:8080](http://localhost:8080) **after installation.**
 <br />
@@ -26,9 +28,15 @@ docker pull plnyrich/pandda-configurator
 docker run -d -p 8080:5000 -p 8081:5001 plnyrich/pandda-configurator
 ```
 
-### Vagrantbox
+### Vagrant
 
-Soon!
+Run the following commands to start the vagrant box with Configurator:
+```bash
+vagrant box add generic/oracle9 --provider=virtualbox
+vagrant up
+```
+
+Note: It might take a while to fully provision & install the vagrant box.
 
 # Documentation
 
