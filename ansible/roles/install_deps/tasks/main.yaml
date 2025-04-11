@@ -1,0 +1,7 @@
+- name: whoami
+  shell: whoami
+
+- name: install dependencies
+  ansible.builtin.dnf:
+    name: dpdk-tools
+    state: present

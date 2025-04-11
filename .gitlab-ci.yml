@@ -1,0 +1,12 @@
+commitlint:
+  image: registry.hub.docker.com/library/node:alpine
+  variables:
+    GIT_DEPTH: 0
+  rules:
+    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+  before_script:
+    - apk add --no-cache git
+    - npm install --save-dev @commitlint/config-conventional @commitlint/cli
+  script:
+    - npx commitlint --extends '@commitlint/config-conventional' --from "${CI_MERGE_REQUEST_DIFF_BASE_SHA}" --to "${CI_COMMIT_SHA}"
+
