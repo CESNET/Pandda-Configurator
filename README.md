@@ -1,7 +1,7 @@
 <div align="center">
 <picture>
-  <source srcset="https://raw.githubusercontent.com/CESNET/Pandda-Playbooks/refs/heads/main/doc/img/logo_horizontal_white.svg" media="(prefers-color-scheme: dark)">
-  <img src="https://raw.githubusercontent.com/CESNET/Pandda-Playbooks/refs/heads/main/doc/img/logo_horizontal_black.svg">
+  <source srcset="https://raw.githubusercontent.com/CESNET/Pandda-Configurator/refs/heads/main/img/logo_horizontal_white.svg" media="(prefers-color-scheme: dark)">
+  <img src="https://raw.githubusercontent.com/CESNET/Pandda-Configurator/refs/heads/main/img/logo_horizontal_black.svg">
 </picture>
 </div>
 
