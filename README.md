@@ -58,7 +58,7 @@ Copyright ©: 2025, CESNET z.s.p.o.
 <div>
 Supported as part of financial support to third parties (FSTP) within the project National Coordination Center in the Czech Republic (NCC-CZ, project no. 101127941) co-financed by the Digital Europe program.
 </div>
-
+<br />
 
 <div align="center">
 <picture>
@@ -71,3 +71,4 @@ Supported as part of financial support to third parties (FSTP) within the projec
   <img src="https://raw.githubusercontent.com/CESNET/Pandda-Configurator/refs/heads/main/img/eu-badge.png?raw=true" width="200">
 </picture>
 </div>
+<br />
