@@ -51,3 +51,23 @@ Configurator, PAssive Network Device Discovery and Analysis
 [BSD-3-Clause license](LICENSE)
 <br />
 Copyright ©: 2025, CESNET z.s.p.o.
+
+
+### Acknowledgement
+
+<div>
+Supported as part of financial support to third parties (FSTP) within the project National Coordination Center in the Czech Republic (NCC-CZ, project no. 101127941) co-financed by the Digital Europe program.
+</div>
+
+
+<div align="center">
+<picture>
+  <img src="https://raw.githubusercontent.com/CESNET/Pandda-Configurator/refs/heads/main/img/eccc_badge.png?raw=true" width="150">
+</picture>
+<picture>
+  <img src="https://raw.githubusercontent.com/CESNET/Pandda-Configurator/refs/heads/main/img/ncc_badge.png?raw=true" width="165">
+</picture>
+<picture>
+  <img src="https://raw.githubusercontent.com/CESNET/Pandda-Configurator/refs/heads/main/img/eu-badge.png?raw=true" width="200">
+</picture>
+</div>
