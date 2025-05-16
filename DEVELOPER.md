@@ -61,3 +61,14 @@ docker build -t plnyrich/pandda-configurator .
 docker image tag plnyrich/pandda-configurator plnyrich/pandda-configurator:<version>
 docker push plnyrich/pandda-configurator
 ```
+
+# Publish a Vagrantbox on the Vagrant Cloud
+
+Use the vagrantfile for developers.
+<br />
+Follow these commands for building a new Vagrantbox:
+```
+mv Vagrantfile.devel Vagrantfile
+vagrant package --vagrantfile Vagrantfile
+```
+After the box is built, upload the .box file to the [HashiCorp Cloud](https://portal.cloud.hashicorp.com/).
