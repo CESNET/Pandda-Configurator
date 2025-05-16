@@ -14,11 +14,11 @@ Step-by-step configuration guide is available as a website that provision both n
 
 Configurator is distributed as ready-to-use [Dockerbox](https://hub.docker.com/r/plnyrich/pandda-devel). However, you can build it yourself.
 <br />
-You can also use vagrant with our prepared Vagrantfile.
+You can also use [Vagrantbox](https://portal.cloud.hashicorp.com/vagrant/discover/PANDDA/Configurator) with our prepared [Vagrantfile](Vagrantfile).
 
 Configurator is available at [localhost:8080](http://localhost:8080) **after installation.**
 <br />
-**Note** ports 8080 (frontend) and 8081 (backend) are used by PANDDA Configurator and **must not** be used by other processes.
+**Note** ports 8080 (frontend) and 8081 (backend) are used by PANDDA Configurator (in both Docker and Vagrant boxes) and **must not** be used by other processes.
 
 ### Dockerbox
 
@@ -28,15 +28,29 @@ docker pull plnyrich/pandda-configurator
 docker run -d -p 8080:5000 -p 8081:5001 plnyrich/pandda-configurator
 ```
 
-### Vagrant
+### Vagrantbox
 
-Run the following commands to start the vagrant box with Configurator:
+Install the Vagrantbox with Configurator by putting [Vagrantfile](Vagrantfile) to the target folder and running:
 ```bash
-vagrant box add generic/oracle9 --provider=virtualbox
 vagrant up
 ```
 
-Note: It might take a while to fully provision & install the vagrant box.
+## Running from the local repository
+
+You can also run Docker and Vagrant from the locally cloned repository without using the prepared boxes.
+
+Docker can be started by running:
+```
+docker build -t pandda-webconf .
+docker run -d -p 8080:5000 -p 8081:5001 --name pandda-webconf pandda-webconf
+```
+
+Vagrant can be started by running:
+```
+mv Vagrantfile Vagrantfile.bak # optionally: backup the Vagrantfile
+mv Vagrantfile.devel Vagrantfile
+vagrant up
+```
 
 # Documentation
 
