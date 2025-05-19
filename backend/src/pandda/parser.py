@@ -43,7 +43,7 @@ def cfgForProbe(central, server):
         insConf['colHost'] = central['collector']['host']
         insConf['colPort'] = central['collector']['port']
         insConf['linkID'] = instance['linkID']
-        insConf['protocol'] = 'udp' if instance['useTCP'] == 'false' else 'tcp'
+        insConf['protocol'] = 'udp' if instance['useTCP'] == 'UDP' else 'tcp'
         config['ipfixprobe_instances'].append(insConf)
     return config
 

@@ -95,8 +95,8 @@ class PanddaConfig:
             cfg_file.write(f'        cache:\n')
             cfg_file.write(f'          size_exponent: {ins["cacheSize"]}\n')
             cfg_file.write(f'        timeouts:\n')
-            cfg_file.write(f'          active_timeout: {ins["activeTimeout"]}\n')
-            cfg_file.write(f'          inactive_timeout: {ins["passiveTimeout"]}\n')
+            cfg_file.write(f'          active: {ins["activeTimeout"]}\n')
+            cfg_file.write(f'          inactive: {ins["passiveTimeout"]}\n')
 
             cfg_file.write(f'      process_plugins:\n')
             for k, v in ins['plugins'].items():
@@ -111,6 +111,11 @@ class PanddaConfig:
             cfg_file.write(f'            id: {ins["linkID"]}\n')
             cfg_file.write(f'          protocol:\n')
             cfg_file.write(f'            {ins["protocol"]}:\n')
+            if ins["protocol"] == 'tcp':
+                cfg_file.write(f'              non_blocking: false\n')
+            else:
+                cfg_file.write(f'              template_refresh: 60\n')
+
 
             cfg_file.write(f'      telemetry:\n')
             cfg_file.write(f'        appfs:\n')
