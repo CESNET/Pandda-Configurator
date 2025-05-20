@@ -116,7 +116,6 @@ class PanddaConfig:
             else:
                 cfg_file.write(f'              template_refresh: 60\n')
 
-
             cfg_file.write(f'      telemetry:\n')
             cfg_file.write(f'        appfs:\n')
             cfg_file.write(f'          enabled: true\n')
