@@ -29,7 +29,7 @@ class PanddaConfig:
 
     def __create_host_vars(self, config):
         col_host = config['collector']['host']
-        install_adict = 'true' if config['collector']['adict'] else 'false'
+        install_adict = 'true' if config['collector']['adict'] == 'true' else 'false'
 
         with open(f"{self.__root}/inventory/host_vars/{col_host}/vars.yaml", 'wt') as vars:
             vars.write(f'install_adict: {install_adict}\n')
