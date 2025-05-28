@@ -12,9 +12,9 @@ Step-by-step configuration guide is available as a website that provision both n
 
 ## Installation
 
-Configurator is distributed as ready-to-use [Dockerbox](https://hub.docker.com/r/plnyrich/pandda-devel). However, you can build it yourself.
+Configurator is distributed as ready-to-use [Dockerbox](https://hub.docker.com/r/projectpandda/configurator). However, you can build it yourself.
 <br />
-You can also use [Vagrantbox](https://portal.cloud.hashicorp.com/vagrant/discover/PANDDA/Configurator) with our prepared [Vagrantfile](Vagrantfile).
+You can also use [Vagrantbox](https://portal.cloud.hashicorp.com/vagrant/discover/projectpandda/configurator) with our prepared [Vagrantfile](Vagrantfile).
 
 Configurator is available at [localhost:8080](http://localhost:8080) **after installation.**
 <br />
@@ -24,8 +24,8 @@ Configurator is available at [localhost:8080](http://localhost:8080) **after ins
 
 Install the Dockerbox with Configurator by running:
 ```bash
-docker pull plnyrich/pandda-configurator
-docker run -d -p 8080:5000 -p 8081:5001 plnyrich/pandda-configurator
+docker pull projectpandda/configurator
+docker run -d -p 8080:5000 -p 8081:5001 projectpandda/configurator
 ```
 
 ### Vagrantbox
