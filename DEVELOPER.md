@@ -19,6 +19,7 @@ git submodule update --init --recursive
 
 You can build the box locally by running:
 ```bash
+mv Vagrantfile.devel Vagrantfile
 vagrant box add generic/oracle9 --provider=virtualbox
 vagrant up
 ```
@@ -57,14 +58,14 @@ docker logs <containerID>
 
 Follow these commands for publishing a new Dockerbox on Dockerhub:
 ```
-docker build -t plnyrich/pandda-configurator .
-docker image tag plnyrich/pandda-configurator plnyrich/pandda-configurator:<version>
-docker push plnyrich/pandda-configurator
+docker build -t projectpandda/configurator .
+docker image tag projectpandda/configurator projectpandda/configurator:<version>
+docker push projectpandda/configurator
 ```
 
 # Publish a Vagrantbox on the Vagrant Cloud
 
-Use the vagrantfile for developers.
+Use the Vagrantfile for developers.
 <br />
 Follow these commands for building a new Vagrantbox:
 ```
